@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
+    <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link th:href="@{/style.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <div class="weather__card">
+                <div class="d-flex flex-row justify-content-center align-items-center">
+                    <div class="p-3">
+                        <h2 th:text="${weather.temperature} + '&deg;C'"></h2>
+                    </div>
+                    <div class="p-3">
+                        <img th:src="@{https://svgur.com/i/oKG.svg}">
+                    </div>
+                    <div class="p-3">
+                        <h5>Wednesday</h5>
+                        <h3>Ho Chi Minh City</h3>
+                        <span class="weather__description">Mostly Cloudy</span>
+                    </div>
+                </div>
+                <div class="weather__status d-flex flex-row justify-content-center align-items-center mt-3">
+                    <div class="p-4 d-flex justify-content-center align-items-center">
+                        <img th:src="@{https://svgur.com/i/oHw.svg}">
+                        <span th:text="${weather.humidity} + '&#37;'"></span>
+                    </div>
+                    <div class="p-4 d-flex justify-content-center align-items-center">
+                        <img th:src="@{https://svgur.com/i/oH_.svg}">
+                        <span th:text="${weather.temperature} + '&deg;C'"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weather Forecast -->
+    <div class="weather__forecast d-flex flex-row justify-content-center align-items-center mt-3">
+        <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+            <span>Wed</span>
+            <img th:src="@{https://svgur.com/i/oJe.svg}">
+            <span>13&deg;</span>
+        </div>
+
+        <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+            <span>Thu</span>
+            <img th:src="@{https://svgur.com/i/oKG.svg}">
+            <span>15&deg;</span>
+        </div>
+
+        <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+            <span>Wed</span>
+            <img th:src="@{https://svgur.com/i/oKG.svg}">
+            <span>15&deg;</span>
+        </div>
+
+        <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+            <span>Fri</span>
+            <img th:src="@{https://svgur.com/i/oJe.svg}">
+            <span>13&deg;</span>
+        </div>
+
+        <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+            <span>Sat</span>
+            <img th:src="@{https://svgur.com/i/oJx.svg}">
+            <span>13&deg;</span>
+        </div>
+
+        <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+            <span>Sun</span>
+            <img th:src="@{https://svgur.com/i/oJU.svg}">
+            <span>11&deg;</span>
+        </div>
+
+        <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+            <span>Mon</span>
+            <img th:src="@{https://svgur.com/i/oJU.svg}">
+            <span>11&deg;</span>
+        </div>
+
+        <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+            <span>Tue</span>
+            <img th:src="@{https://svgur.com/i/oJy.svg}">
+            <span>6&deg;</span>
+        </div>
+    </div>
+
+    <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js}" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
